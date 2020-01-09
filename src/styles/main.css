@@ -1,0 +1,23 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: royalblue;
+}
+
+.input-container{
+  width: 1170px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  margin: 20px auto;
+  background-color: #fff;
+}
+
+.input-container label {
+  margin-right: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
