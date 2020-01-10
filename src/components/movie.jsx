@@ -10,7 +10,7 @@ import pulpFiction from "../assets/pulp-fiction.jpg";
 const Movie = props => {
   let image = "";
 
-  switch (props.title) {
+  switch (props.name) {
     case "Dark Knight":
       image = darkKnight;
       break;

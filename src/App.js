@@ -20,7 +20,11 @@ class App extends Component {
       name.push(data[key].title);
       year.push(data[key].year);
     });
-    console.log(name);
+
+    let newName = name.filter(movie => {
+      return movie.toLowerCase().indexOf(this.state.query) !== -1;
+    });
+
     return (
       <div className="container">
         <div className="input-container">
@@ -28,8 +32,10 @@ class App extends Component {
           <input type="text" onKeyUp={this.searchFunc} />
         </div>
         <div className="movies-container">
-          {name.map((movie, i) => {
-            return <Movie title={name[i]} year={year[i]} key={i} />;
+          {newName.map((movie, i) => {
+            return (
+              <Movie name={movie} title={name[i]} year={year[i]} key={i} />
+            );
           })}
         </div>
       </div>
