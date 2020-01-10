@@ -47,6 +47,7 @@ body {
 .movie-image {
   height: 300px;
   width: 220px;
+  background-size: cover;
 }
 .movie-title,
 .movie-year {
