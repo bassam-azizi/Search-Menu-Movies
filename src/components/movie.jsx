@@ -42,7 +42,7 @@ const Movie = props => {
   return (
     <div className="movie-container">
       <div className="movie-image" style={cover} />
-      <p className="movie-title">{props.title}</p>
+      <p className="movie-title">{props.name}</p>
       <p className="movie-year">{props.year}</p>
     </div>
   );
