@@ -4,6 +4,14 @@ import data from "./components/data";
 import "./styles/main.css";
 
 class App extends Component {
+  state = {
+    query: ""
+  };
+
+  searchFunc = event => {
+    this.setState({ query: event.target.value });
+  };
+
   render() {
     let name = [];
     let year = [];
@@ -17,7 +25,7 @@ class App extends Component {
       <div className="container">
         <div className="input-container">
           <label>Search for Movie </label>
-          <input type="text" />
+          <input type="text" onKeyUp={this.searchFunc} />
         </div>
         <div className="movies-container">
           {name.map((movie, i) => {
